@@ -22,4 +22,11 @@
     4. Toán tử 3 ngôi viết tắt của if-else  
     condition ? nếu đúng: sai
 
+    5. Toán tử tăng giảm
+    ++i : tiền tố: tăng trước
+    i++ : hậu tố: tăng sau
+
 */
+
+let a=5;
+let result= ++a + a++ + ++a - a-- -a

@@ -13,8 +13,7 @@ while (running){
 5. Tìm sản phẩm
 6. Xem báo cáo kho
 7. Thoát
-Chọn (1-7):`
-  );
+Chọn (1-7):`);
   if (choice === null) break;
   switch (Number(choice)){
     case 1:

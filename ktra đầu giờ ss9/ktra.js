@@ -14,10 +14,10 @@ for (let i=0;i<revenues.length;i++){
 console.log("Có đơn hàng âm:", negativeOrder);
 console.log("Tất cả trên 500:", allAbove500);
 
-let netProfits = [];
+let netProfit = [];
 for (let i=0;i<revenues.length;i++){
     let profit = revenues[i]*0.9;  
-    netProfits.push(profit);
+    netProfit.push(profit);
 }
 
-console.log("Lợi nhuận ròng: ", netProfits);
+console.log("Lợi nhuận ròng: ", netProfit);

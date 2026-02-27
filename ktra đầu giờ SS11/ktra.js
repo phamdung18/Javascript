@@ -17,7 +17,7 @@ function checkWeakStudent(studentList){
         return student.score < 4.0;
     });
     if (hasWeak){
-        console.log("Có sinh viên yếu");
+        console.log("Có sinh viên yếu :");
     } else{
         console.log("Không có sinh viên yếu");
     }

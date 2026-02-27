@@ -19,4 +19,3 @@ if (n >0){
 } else{
     console.log("Giá trị n không hợp lệ để tạo dãy số");
 }
-

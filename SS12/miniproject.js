@@ -4,6 +4,7 @@ const AGE_MAX = 60;
 const GPA_MIN = 0;
 const GPA_MAX = 10;
 const PAGE_SIZE = 5;
+
 function createStudent() {
   let id = prompt("Nhập ID:");
   if (students.some(st => st.id === id)) {
@@ -93,7 +94,7 @@ function viewStudents() {
   let keyword = prompt("Search theo tên:") || "";
   let filterStatus = prompt("Filter (all/active/inactive):") || "all";
   let sortOrder = prompt("Sort GPA (asc/desc):") || "desc";
-  let data = [...students]; // clone
+  let data = [...students];
   data = data.filter(st =>
     st.name.toLowerCase().includes(keyword.toLowerCase())
   );
@@ -120,17 +121,11 @@ function viewStudents() {
     else if (!isNaN(command)) page = Number(command);
   } while (command !== "exit");
 }
-  console.log("===== ANALYTICS =====");
-  console.log("Overview:", overview);
-  console.log("GPA trung bình:", avgGpa.toFixed(2));
-  console.log("Risk count:", risk.length);
-  console.log("Distribution:", distribution);
-  console.table(top5);
 function main() {
   let choice;
   do {
     choice = prompt(`
-==== STUDENT MANAGER ADVANCED ====
+==== STUDENT MANAGER ====
 1. Create Student
 2. Update Student
 3. Soft Delete Student
@@ -152,12 +147,15 @@ function main() {
       case "4": 
       restoreStudent(); 
       break;
-      case "5":
-        viewStudents(); 
+      case "5": 
+      viewStudents(); 
       break;
-      case "6":  
+      case "6": 
+      analyticsDashboard(); 
       break;
-      case "0": alert("Bye!"); break;
+      case "0": 
+      alert("Bye!"); 
+      break;
       default: alert("Sai lựa chọn!");
     }
   } while (choice !== "0");

@@ -66,7 +66,7 @@ function filterGPA() {
 function updateStudent(){
   let id = parseInt(prompt("Nhap ID can sua:"));
   let student = students.find(s => s.id === id);
-  if (!student) {
+  if (!student){
     alert("Khong tim thay!");
     return;
   }
@@ -75,7 +75,7 @@ function updateStudent(){
   let newGpa = prompt("Nhap GPA moi:");
 
   if (newName) student.name = newName;
-  if (newGpa && !isNaN(parseFloat(newGpa))){
+  if (newGpa && !isNaN(parseFloat(newGpa))) {
     student.gpa = parseFloat(newGpa);
   }
   alert("Cap nhat thanh cong!");

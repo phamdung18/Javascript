@@ -190,3 +190,4 @@ searchInput.addEventListener("input", filterProducts);
   filterCategory.addEventListener("change", filterProducts);
 
 renderProducts();
+
